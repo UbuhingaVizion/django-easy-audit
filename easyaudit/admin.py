@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.contrib.auth import get_user_model
 from django.contrib.contenttypes.models import ContentType
 
 try: # Django 2.0
@@ -13,8 +12,7 @@ from . import settings
 from .models import CRUDEvent, LoginEvent, RequestEvent
 from .admin_helpers import prettify_json, EasyAuditModelAdmin
 from .settings import (CRUD_EVENT_LIST_FILTER, LOGIN_EVENT_LIST_FILTER, REQUEST_EVENT_LIST_FILTER,
-                       CRUD_EVENT_SEARCH_FIELDS, LOGIN_EVENT_SEARCH_FIELDS, REQUEST_EVENT_SEARCH_FIELDS,
-                       READONLY_EVENTS)
+                       CRUD_EVENT_SEARCH_FIELDS, LOGIN_EVENT_SEARCH_FIELDS, REQUEST_EVENT_SEARCH_FIELDS)
 
 # CRUD events
 class CRUDEventAdmin(EasyAuditModelAdmin):
